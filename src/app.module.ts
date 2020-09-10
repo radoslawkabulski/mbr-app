@@ -11,11 +11,11 @@ import { UserRepository } from './users/users.repository';
     TypeOrmModule.forRoot({
     type: 'mysql',
     host: 'mysql-db',
-    port: 3307,
+    port: 3306,
     username: 'root',
     password: 'test',
     database: 'myDb',
-    entities: [User, UserRepository],
+    entities: [],
     synchronize: true,
   }),
     UsersModule,

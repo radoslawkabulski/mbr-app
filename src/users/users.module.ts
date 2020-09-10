@@ -8,13 +8,14 @@ import { UserRepository } from './users.repository';
   imports: [TypeOrmModule.forRoot({
     type: 'mysql',
     host: 'mysql-db',
-    port: 3307,
+    port: 3306,
     username: 'root',
     password: 'test',
     database: 'myDb',
     entities: [User, UserRepository],
     synchronize: true,
   }),],
-  controllers: [UsersController]
+  controllers: [UsersController],
+  providers: [UserRepository]
 })
 export class UsersModule {}
